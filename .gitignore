@@ -1,0 +1,5 @@
+/node_modules/
+/ruff_modules/
+/.ruff/
+
+.DS_Store

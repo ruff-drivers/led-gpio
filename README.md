@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ruff-drivers/driver-template.svg)](https://travis-ci.org/ruff-drivers/driver-template)
+[![Build Status](https://travis-ci.org/ruff-drivers/led-gpio.svg)](https://travis-ci.org/ruff-drivers/led-gpio)
 
 # LED Driver with GPIO interface
 

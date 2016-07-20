@@ -1,6 +1,6 @@
 {
   "name": "led-gpio",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Driver description.",
   "author": "Nanchao Inc.",
   "license": "MIT",
@@ -19,7 +19,7 @@
   "main": "src/index.js",
   "device-typings": "typings/device.d.ts",
   "engines": {
-    "ruff": "~1.2.0"
+    "ruff": ">=1.2.0 <1.4.0"
   },
   "scripts": {
     "install-sdk": "rvm install --local",

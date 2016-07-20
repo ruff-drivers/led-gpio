@@ -6,7 +6,7 @@ This is the driver for LED module with GPIO interface.
 
 ## Supported Engines
 
-* Ruff: 1.2.0
+* Ruff: >=1.2.0 <1.4.0
 
 ## Installing
 

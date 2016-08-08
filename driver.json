@@ -7,14 +7,12 @@
             "type" : "gpio",
             "args" : {
                 "direction": "out",
-                "level": "low"
+                "level": "low",
+                "activeLow": {
+                    "type": "boolean",
+                    "default": false
+                }
             }
-        }
-    },
-    "args": {
-        "activeLow": {
-            "type": "boolean",
-            "default": false
         }
     }
 }

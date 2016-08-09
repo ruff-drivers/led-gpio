@@ -8,12 +8,9 @@
 var driver = require('ruff-driver');
 
 module.exports = driver({
-    attach: function (inputs, context, next) {
+    attach: function (inputs) {
         this._gpio = inputs['gpio'];
-        var args = context.args;
-        var activeLow = args.activeLow;
         this._isOn = false;
-        this._gpio.setActiveLow(activeLow, next);
     },
     exports: {
         turnOn: function (callback) {

@@ -2,11 +2,11 @@
 
 # LED Driver with GPIO interface
 
-This is the driver for LED module with GPIO interface.
+This is the driver for LED module with GPIO interface. Support both high active and low active LEDs.
 
 ## Supported Engines
 
-* Ruff: >=1.2.0 <1.4.0
+* Ruff: >=1.4.0 <1.5.0
 
 ## Installing
 
@@ -19,6 +19,7 @@ rap device add <device-id>
 
 # Then enter a supported model, for example:
 # ? model: led-gpio
+# ? value (boolean) for argument "activeLow": (y/N)
 ```
 
 ## Usage
@@ -35,13 +36,13 @@ $('#<device-id>').isOn();
 
 ### Methods
 
-#### `turnOn(callback)`
+#### `turnOn([callback])`
 
 Turn on the led.
 
 - **callback:** No arguments other than a possible exception are given to the completion callback.
 
-#### `turnOff(callback)`
+#### `turnOff([callback])`
 
 Turn off the led.
 

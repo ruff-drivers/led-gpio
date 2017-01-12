@@ -4,7 +4,6 @@ var assert = require('assert');
 var mock = require('ruff-mock');
 
 var any = mock.any;
-var mockAny = mock.mockAny;
 var when = mock.when;
 var verify = mock.verify;
 
@@ -17,7 +16,7 @@ describe('Driver LED', function () {
     var gpio;
 
     beforeEach(function () {
-        gpio = mockAny();
+        gpio = mock();
 
         led = new Device({
             gpio: gpio

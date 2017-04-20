@@ -11,6 +11,7 @@ module.exports = driver({
     attach: function (inputs) {
         this._gpio = inputs['gpio'];
         this._isOn = false;
+        this._isFlicker = false;
     },
     exports: {
         turnOn: function (callback) {
@@ -41,6 +42,28 @@ module.exports = driver({
         },
         isOn: function () {
             return this._isOn;
+        },
+        flicker: function (callback) {
+            var that = this;
+
+            if (this._isOn) {
+                invokeCallback(callback);
+                return;
+            }
+
+            if (this._isFlicker) {
+                invokeCallback(callback);
+                return;
+            }
+
+            this._isFlicker = true;
+            this._gpio.write(1);
+            setTimeout(function () {
+                that._gpio.write(0, function (error) {
+                    invokeCallback(callback, error);
+                    that._isFlicker = false;
+                });
+            }, 50);
         }
     }
 });

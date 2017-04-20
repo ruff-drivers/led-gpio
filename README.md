@@ -30,6 +30,7 @@ Here is the basic usage of this driver.
 $('#<device-id>').turnOn([callback]);
 $('#<device-id>').turnOff([callback]);
 $('#<device-id>').isOn();
+$('#<device-id>').flicker([callback]);
 ```
 
 ## API References
@@ -51,6 +52,17 @@ Turn off the led.
 #### `isOn()`
 
 Get the working state of the led.
+
+#### `flicker([callback])`
+
+Flicker the led for 50ms.
+
+- **callback:** No arguments other than a possible exception are given to the completion callback.
+
+In these two following cases, this function will return directly.
+
+1. call it when it's in **on** status.
+2. call it again when it started less than 50ms.
 
 ## Contributing
 

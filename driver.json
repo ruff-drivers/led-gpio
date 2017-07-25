@@ -1,17 +1,19 @@
 {
+    "featureVersion": "0.1",
     "models": [
         "led-gpio"
     ],
     "inputs": {
         "gpio": {
-            "type" : "gpio",
-            "args" : {
+            "type": "gpio",
+            "args": {
                 "direction": "out",
-                "level": "low",
-                "activeLow": {
-                    "type": "boolean",
-                    "default": false
-                }
+                "level": "low"
+            },
+            "features": {
+                "output": [
+                    "write"
+                ]
             }
         }
     }
